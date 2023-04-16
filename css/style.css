@@ -1,0 +1,366 @@
+:root { 
+    --background: rgb(17, 17, 17);
+    --background-50: rgb(30, 30, 31);
+    --background-30: rgb(36, 36, 37);
+    --background-20: rgb(40, 40, 42);
+    --background-10: rgb(59, 59, 60);
+    
+
+    --color: rgb(255 255 255);
+    --color-50: rgba(255, 255, 255, .5);
+    --color-gold: rgb(244, 201, 102);
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--color);
+}
+
+/* content - [START] */
+.container.content {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 50px;
+    gap: 20px;
+
+    position: relative;
+}
+/* content - [END^] */
+
+
+/* aside - [START] */
+aside {
+    background-color: var(--background-50);
+    width: 300px;
+    padding: 0 35px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    max-height: 95vh;
+
+    border: 2px solid var(--background-30);
+
+    position: sticky;
+    top: 20px;
+
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.aside__close,
+.nav__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    color: var(--color-gold);
+    font-size: 1.3rem;
+
+    display: none;
+}
+
+aside hr {
+    color: var(--background-10);
+    border-width: 2px;
+    margin: 40px 0;
+}
+
+/* aside header - [START] */
+.aside__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__avatar {
+    background-color: var(--background-10);
+    width: 140px;
+    height: 140px;
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__avatar img {
+    width: 70%;
+    height: 70%;
+}
+
+/* text */
+.header__text {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.header__text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header__text span {
+    display: inline-block;
+    background-color: var(--background-10);
+    font-size: .75rem;
+    padding: 4px 15px;
+    border-radius: 6px;
+}
+
+
+/* aside header - [END^] */
+
+
+/* aside body - [START] */
+.aside__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.body__box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.body__icon {
+    /* background-color: var(--background); */
+    border: 2px solid var(--background-30);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+
+    color: var(--color-gold);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body__icon i {
+    font-size: 1.1rem;
+}
+
+
+.body__text h6{
+    font-size: .7rem;
+    color: var(--color-50);
+    margin-bottom: 5px;
+}
+/* aside body - [END^] */
+
+.menu {
+    position: fixed;
+    bottom: 10px;
+    left: 7px;
+
+    display: none;
+    z-index: 99999;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    outline: none;
+
+    color: var(--color-gold);
+    font-size: 1.6rem;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* aside - [END^] */
+
+
+/* main - [START] */
+
+main {
+    width: 100%;
+    background-color: var(--background-50);
+    padding: 0 35px;
+    padding-top: 60px;
+    /* padding-bottom: 20px; */
+
+    border-radius: 20px;
+    border: 2px solid var(--background-30);
+    overflow: hidden;
+
+    position: relative;
+}
+
+main h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+main h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: var(--color-gold);
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+main h3 {
+    font-size: 1.45rem;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+main section {
+    margin-bottom: 45px;
+}
+
+main section p {
+    color: var(--color-50);
+}
+
+/* main nav - [START] */
+main nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: var(--background-20);
+    border-bottom: 1px solid var(--background-10);
+    border-left: 1px solid var(--background-10);
+    border-bottom-left-radius: 20px;  
+}
+
+.nav__items {
+    list-style: none;
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.nav__items li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav__items li a {
+    display: inline-block;
+    color: var(--color);
+    text-decoration: none;
+
+    font-size: .9rem;
+}
+
+.nav__items li a.active {
+    color: var(--color-gold);
+}
+
+/* main nav - [END^] */
+
+
+/* main resume - [START] */
+.resume__box {
+    background-color: var(--background-20);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--background-10);
+
+    display: flex;
+    gap: 15px;
+}
+
+.resume__box i {
+    font-size: 2rem;
+    color: var(--color-gold);
+}
+
+.resume__text h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    margin-bottom: 7px;
+}
+
+.resume__text p {
+    font-size: .9rem;
+    margin: 0;
+}
+/* main resume - [END^] */
+
+/* main - [END^] */
+
+
+.effect {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 99999;
+
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0) );
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    aside {
+        position: fixed;
+        left: -200%;
+        top:0;
+        width: 250px;
+        height: 100vh;
+        max-height: 100vh;
+        z-index: 9999999;
+
+        border-radius: 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside__close,
+    .nav__close {
+        display: inline-block;
+    }
+
+    main nav {
+        position: fixed;
+        top: -100%;
+        width: 100%;
+
+        border-bottom-right-radius: 20px;
+    }
+
+    .nav__items li {
+        display: block;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 25px;
+        height: 3px;
+        background-color: var(--color-gold);
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      .change .bar1 {
+        transform: translate(0, 15px) rotate(-45deg);
+      }
+      
+      .change .bar2 {opacity: 0;}
+      
+      .change .bar3 {
+        transform: translate(0, -3px) rotate(45deg);
+      }
+}

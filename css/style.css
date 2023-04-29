@@ -412,7 +412,6 @@ main nav {
 
 #loading .loading__first svg {
     width: 75%;
-    fill-opacity: 0;
     fill: #fff;
     stroke: #fff;
     stroke-width: 3px;
@@ -428,7 +427,7 @@ main nav {
 }
 
 @keyframes loadingSvg {
-    0% { stroke-dashoffset: 1000; }
+    0% { stroke-dashoffset: 1000; fill-opacity: 0; }
 
     40% { fill-opacity: 0; }
 
